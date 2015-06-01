@@ -2,11 +2,13 @@
 	$menu_sections = get_field_object('menu_sections');
 ?>
 
-<h1><?php echo the_title(); ?></h1>
+<article>
+	<header>
+		<h1><?php echo the_title(); ?></h1>
+		<?php the_post_thumbnail(); ?>
+	</header>
 
-<?php the_post_thumbnail(); ?>
-
-<?php foreach ($menu_sections['value'] as $section) { ?>
+	<?php foreach ($menu_sections['value'] as $section) { ?>
 	<section>
 
 		<h2><?php echo $section['menu_section_title']; ?></h2>
@@ -22,4 +24,5 @@
 		<?php } ?>
 
 	</section>
-<?php } ?>
+	<?php } ?>
+</article>
