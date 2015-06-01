@@ -72,30 +72,13 @@ endwhile; endif;
 <div class="container-wrap <?php echo ($fullscreen_header == true) ? 'fullscreen-blog-header': null; ?> <?php if($blog_type == 'std-blog-fullwidth' || $hide_sidebar == '1') echo 'no-sidebar'; ?>">
 
 	<div class="container main-content">
+			
+		<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+
+			<?php get_template_part( 'partials/menu' ); ?> 
 		
-		<?php if(get_post_format() != 'quote' && get_post_format() != 'status' && get_post_format() != 'aside') { ?>
-			
-			<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-			    
-			    <?php if((empty($bg) && empty($bg_color)) && $fullscreen_header != true) { ?>
-					<h1><?php echo the_title(); ?></h1>
-					<?php the_post_thumbnail(); ?>
-					<?php foreach ($menu_sections['value'] as $section) { ?>
-					<section>
-						<h2><?php echo $section['menu_section_title']; ?></h2>
-						<?php foreach ($section['menu_section_dishes'] as $dish) { ?>
-							<div class="menu-item">
-								<h3><?php echo $dish['menu_section_dish_name']; ?> <span class="numerals"><?php echo $dish['menu_section_dish_price']; ?></span></h3>
-								<p><?php echo $dish['menu_section_dish_description']; ?></p>
-							</div>
-						<?php } ?>
-					</section>
-					<?php } ?>
-				<?php }
-			
-			endwhile; endif; ?>
-			
-		<?php } ?>
+		<?php endwhile; endif; ?>	
+
 
 		<!--ascend only author/comment positioning-->
 		<div class="row">
