@@ -1,3 +1,4 @@
 # gitignore for local-kitchen
 
 uploads
+*.DS_Store
