@@ -1,6 +1,6 @@
 <?php 
 /**
-* Template Name: Menu Archive
+* Menu Archive
 */
 
 get_header(); 
@@ -27,10 +27,17 @@ endwhile; endif;
 <div class="container-wrap <?php echo ($fullscreen_header == true) ? 'fullscreen-blog-header': null; ?> <?php if($blog_type == 'std-blog-fullwidth' || $hide_sidebar == '1') echo 'no-sidebar'; ?>">
 
 	<div class="container main-content">
-			
-		<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-			<?php get_template_part( 'partials/menu' ); ?> 		
-		<?php endwhile; endif; ?>	
+
+		<?php
+		$args = array( 'post_type' => 'menus', 'orderby' => 'menu_order', 'order'=> 'ASC' );
+		$menuslist = get_posts( $args );
+		foreach ( $menuslist as $post ) :
+		  setup_postdata( $post ); ?> 
+			<?php get_template_part( 'partials/menu' ); ?> 	
+		<?php
+		endforeach; 
+		wp_reset_postdata();
+		?>
 
 		<p><strong>Delivery and pick up is available. Call us: 310-396-8009</strong></p>
 		
