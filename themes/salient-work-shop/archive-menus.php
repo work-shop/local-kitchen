@@ -38,8 +38,6 @@ endwhile; endif;
 		endforeach; 
 		wp_reset_postdata();
 		?>
-
-		<p><strong>Delivery and pick up is available. Call us: 310-396-8009</strong></p>
 		
 	</div><!--/container-->
 
