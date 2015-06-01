@@ -75,21 +75,23 @@ endwhile; endif;
 		
 		<?php if(get_post_format() != 'quote' && get_post_format() != 'status' && get_post_format() != 'aside') { ?>
 			
-			<?php if(have_posts()) : while(have_posts()) : the_post();
-			
-			    if((empty($bg) && empty($bg_color)) && $fullscreen_header != true) { ?>
-
-				<h1><?php echo the_title(); ?></h1>
-				<?php the_post_thumbnail(); ?>
-				<?php foreach ($menu_sections['value'] as $section) { ?>
-					<h2><?php echo $section['menu_section_title']; ?></h2>
-					<?php foreach ($section['menu_section_dishes'] as $dish) { ?>
-						<h3><?php echo $dish['menu_section_dish_name']; ?> <span class="numerals"><?php echo $dish['menu_section_dish_price']; ?></span></h3>
-						<p><?php echo $dish['menu_section_dish_description']; ?></p>
+			<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+			    
+			    <?php if((empty($bg) && empty($bg_color)) && $fullscreen_header != true) { ?>
+					<h1><?php echo the_title(); ?></h1>
+					<?php the_post_thumbnail(); ?>
+					<?php foreach ($menu_sections['value'] as $section) { ?>
+					<section>
+						<h2><?php echo $section['menu_section_title']; ?></h2>
+						<?php foreach ($section['menu_section_dishes'] as $dish) { ?>
+							<div class="menu-item">
+								<h3><?php echo $dish['menu_section_dish_name']; ?> <span class="numerals"><?php echo $dish['menu_section_dish_price']; ?></span></h3>
+								<p><?php echo $dish['menu_section_dish_description']; ?></p>
+							</div>
+						<?php } ?>
+					</section>
 					<?php } ?>
-				<?php } ?>
-
-			<?php }
+				<?php }
 			
 			endwhile; endif; ?>
 			
