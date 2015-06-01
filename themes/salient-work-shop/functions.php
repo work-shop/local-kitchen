@@ -33,7 +33,8 @@ function add_menu_posttype() {
 		'public' => true,
 		'has_archive' => true,
 		'rewrite' => array('slug' => 'menus'),
-		'supports' => array('title', 'thumbnail')
+		'supports' => array('title', 'thumbnail', 'page-attributes'),
+		'order-by' => 'menu_order'
 	));
 }
 add_action('init', 'add_menu_posttype');
