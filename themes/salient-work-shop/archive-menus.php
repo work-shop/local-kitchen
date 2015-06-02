@@ -24,23 +24,19 @@ endwhile; endif;
 
 ?>
 
-<div class="container-wrap <?php echo ($fullscreen_header == true) ? 'fullscreen-blog-header': null; ?> <?php if($blog_type == 'std-blog-fullwidth' || $hide_sidebar == '1') echo 'no-sidebar'; ?>">
+<div class="menu">
 
-	<div class="container main-content menu">
+	<?php
+	$args = array( 'post_type' => 'menus', 'orderby' => 'menu_order', 'order'=> 'ASC' );
+	$menuslist = get_posts( $args );
+	foreach ( $menuslist as $post ) :
+	  setup_postdata( $post ); ?> 
+		<?php get_template_part( 'partials/menu' ); ?> 	
+	<?php
+	endforeach; 
+	wp_reset_postdata();
+	?>
 
-		<?php
-		$args = array( 'post_type' => 'menus', 'orderby' => 'menu_order', 'order'=> 'ASC' );
-		$menuslist = get_posts( $args );
-		foreach ( $menuslist as $post ) :
-		  setup_postdata( $post ); ?> 
-			<?php get_template_part( 'partials/menu' ); ?> 	
-		<?php
-		endforeach; 
-		wp_reset_postdata();
-		?>
-		
-	</div><!--/container-->
-
-</div><!--/container-wrap-->
+</div>
 	
 <?php get_footer(); ?>

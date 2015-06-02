@@ -21,16 +21,12 @@ endwhile; endif;
 
 ?>
 
-<div class="container-wrap <?php echo ($fullscreen_header == true) ? 'fullscreen-blog-header': null; ?> <?php if($blog_type == 'std-blog-fullwidth' || $hide_sidebar == '1') echo 'no-sidebar'; ?>">
-
-	<div class="container main-content menu">
+<div class="menu">
 			
-		<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-			<?php get_template_part( 'partials/menu' ); ?> 		
-		<?php endwhile; endif; ?>	
-		
-	</div><!--/container-->
+	<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+		<?php get_template_part( 'partials/menu' ); ?> 		
+	<?php endwhile; endif; ?>	
 
-</div><!--/container-wrap-->
+</div>
 	
 <?php get_footer(); ?>

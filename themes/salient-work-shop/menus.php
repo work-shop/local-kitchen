@@ -26,27 +26,23 @@ endwhile; endif;
 
 ?>
 
-<div class="container-wrap <?php echo ($fullscreen_header == true) ? 'fullscreen-blog-header': null; ?> <?php if($blog_type == 'std-blog-fullwidth' || $hide_sidebar == '1') echo 'no-sidebar'; ?>">
-
-	<div class="container main-content menu">
+<div class="menu">
 			
-		<?php
+	<?php
+	
+	$args = array( 'post_type' => 'menus', 'orderby' => 'menu_order', 'order'=> 'ASC' );
+	$menuslist = get_posts( $args );
+	foreach ( $menuslist as $post ) :
+	  setup_postdata( $post ); ?> 
+		<?php get_template_part( 'partials/menu' ); ?> 	
+	<?php
+	endforeach; 
+	wp_reset_postdata();
+
+	the_content();
+
+	?>	
 		
-		$args = array( 'post_type' => 'menus', 'orderby' => 'menu_order', 'order'=> 'ASC' );
-		$menuslist = get_posts( $args );
-		foreach ( $menuslist as $post ) :
-		  setup_postdata( $post ); ?> 
-			<?php get_template_part( 'partials/menu' ); ?> 	
-		<?php
-		endforeach; 
-		wp_reset_postdata();
-
-		the_content();
-
-		?>	
-		
-	</div><!--/container-->
-
-</div><!--/container-wrap-->
+</div>
 	
 <?php get_footer(); ?>

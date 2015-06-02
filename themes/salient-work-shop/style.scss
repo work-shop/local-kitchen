@@ -185,14 +185,6 @@ header#top nav .sf-menu li {
 		font-style: italic;
 	}
 
-	article {
-		margin-top: 3em;
-	}
-
-	header {
-		margin-bottom: 2em;
-	}
-
 	section {
 		padding-bottom: 2em;
 	}
@@ -220,7 +212,8 @@ header#top nav .sf-menu li {
 
 .page-template-menus, .single-menus, .post-type-archive-menus {
 	.container-wrap {
-		padding-top: 8px; /* magic number */
+		margin-top: 0;
+		padding-top: 3em;
 		padding-bottom: 48px;
 	}
 }

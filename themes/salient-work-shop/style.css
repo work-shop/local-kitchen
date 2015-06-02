@@ -131,10 +131,6 @@ header#top nav .sf-menu li > a:hover, header#top nav .sf-menu li.current-menu-it
   .menu .numerals {
     font-family: "Georgia Italic";
     font-style: italic; }
-  .menu article {
-    margin-top: 3em; }
-  .menu header {
-    margin-bottom: 2em; }
   .menu section {
     padding-bottom: 2em; }
   .menu .photo {
@@ -150,8 +146,8 @@ header#top nav .sf-menu li > a:hover, header#top nav .sf-menu li.current-menu-it
 
 /* end .menu */
 .page-template-menus .container-wrap, .single-menus .container-wrap, .post-type-archive-menus .container-wrap {
-  padding-top: 8px;
-  /* magic number */
+  margin-top: 0;
+  padding-top: 3em;
   padding-bottom: 48px; }
 
 /*# sourceMappingURL=style.css.map */
