@@ -72,7 +72,6 @@ header#top nav .sf-menu li {
 		padding-left: 0;
 		padding-right: 0;
 		margin: 0 1em 3em;
-		// transition: all 0.1s linear;
 		@include transition(all);
 	}
 	> a:hover, &.current-menu-item > a {
@@ -124,11 +123,12 @@ header#top nav .sf-menu li {
 		}
 
 		section, .menu-item {
-			-webkit-column-break-inside:avoid;
-			-moz-column-break-inside:avoid;
-			-o-column-break-inside:avoid;
-			-ms-column-break-inside:avoid;
-			column-break-inside:avoid;
+			-webkit-column-break-inside: avoid;
+			-moz-column-break-inside: avoid;
+			-o-column-break-inside: avoid;
+			-ms-column-break-inside: avoid;
+			page-break-inside: avoid;
+			column-break-inside: avoid;
 		}
 
 	}

@@ -97,6 +97,7 @@ header#top nav .sf-menu li > a:hover, header#top nav .sf-menu li.current-menu-it
       -moz-column-break-inside: avoid;
       -o-column-break-inside: avoid;
       -ms-column-break-inside: avoid;
+      page-break-inside: avoid;
       column-break-inside: avoid; } }
   .menu h1, .menu h2, .menu h3 {
     line-height: 1em; }
