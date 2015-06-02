@@ -8,6 +8,9 @@ Template: salient
 Version: 0.0.1
 */
 @import url("../salient/style.css");
+body {
+  color: #0b364c; }
+
 /*******************************
 **** MENU PAGES ****************
 ********************************/
