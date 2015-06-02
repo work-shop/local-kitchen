@@ -101,21 +101,22 @@ header#top nav .sf-menu li > a:hover, header#top nav .sf-menu li.current-menu-it
       column-break-inside: avoid; } }
   .menu h1, .menu h2, .menu h3 {
     line-height: 1em; }
-  .menu h1, .menu h2 {
-    font-weight: 400;
-    font-family: "Playfair Display";
-    text-transform: uppercase;
-    letter-spacing: 0.25em; }
   .menu h2, .menu h3 {
     color: #0b364c; }
   .menu h1 {
-    font-size: 2em;
+    font-family: "AvenirLTPro-Roman";
+    letter-spacing: 0.35em;
+    font-size: 1.25em;
     color: #ffffff;
     text-align: center;
     margin: 0;
-    padding: 0.5em 0;
+    padding: 1.125em 0 1em;
     background: #0b364c; }
   .menu h2 {
+    font-weight: 400;
+    font-family: "Playfair Display";
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
     font-size: 1.325em;
     padding-bottom: 0.375em;
     border-bottom: 1px solid;
