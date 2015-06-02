@@ -29,8 +29,12 @@ Version: 0.0.1
 ********************************/
 
 $black: #0b364c;
-$blue-dk: #0b364c;
+$navy: #0b364c;
 $white: #ffffff;
+
+body {
+	background-color: $navy;
+}
 
 
 /*******************************
@@ -48,7 +52,7 @@ $bold: "AvenirLTPro-Heavy";
 $italic: "Georgia Italic";
 
 body {
-	color: $blue-dk;
+	color: $navy;
 }
 
 h1, h2, h3, h4, h5, h6, nav a, #footer-outer .widget h4, .text-on-hover-wrap .categories a {
@@ -72,7 +76,7 @@ header#top nav .sf-menu li {
 		@include transition(all);
 	}
 	> a:hover, &.current-menu-item > a {
-		border-color: $blue-dk;
+		border-color: $navy;
 	}
 }
 
@@ -152,7 +156,7 @@ header#top nav .sf-menu li {
 		text-align: center;
 		margin: 0;
 		padding: 0.5em 0;
-		background: $blue-dk;
+		background: $navy;
 	}
 
 	h2 {
