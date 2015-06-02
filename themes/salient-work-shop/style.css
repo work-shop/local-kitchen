@@ -37,6 +37,9 @@ h1, h2, h3, h4, h5, h6, nav a, #footer-outer .widget h4, .text-on-hover-wrap .ca
   font-family: "AvenirLTPro-Heavy";
   letter-spacing: 0.025em; }
 
+/*******************************
+**** FOOTER ********************
+********************************/
 #call-to-action span {
   font-family: "Playfair Display"; }
 
@@ -55,8 +58,7 @@ h1, h2, h3, h4, h5, h6, nav a, #footer-outer .widget h4, .text-on-hover-wrap .ca
 ********************************/
 .menu {
   /* LAYOUT */
-  /* GENERAL */
-  /* SITE-SPECIFIC */ }
+  /* STYLES */ }
   @media only screen and (min-width: 1001px) {
     .menu .menu-body {
       max-width: 940px;
