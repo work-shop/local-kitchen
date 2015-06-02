@@ -1,0 +1,121 @@
+/*
+Theme Name: Salient Work-Shop
+Theme URI: http: //workshopri.com/
+Description: Salient Child Theme for Local Kitchen and Wine Bar
+Author: Work-Shop
+Author URI: http: //workshopri.com/
+Template: salient
+Version: 0.0.1
+*/
+
+@import url("../salient/style.css");
+
+$black: #0b364c;
+$blue-dk: #0b364c;
+$white: #ffffff;
+
+$serif: "Playfair Display";
+$sans-serif: "Montserrat";
+$italic: "Georgia Italic";
+
+
+/*******************************
+**** MENU PAGES ****************
+********************************/
+
+.menu {
+
+	/* GENERAL */
+
+	h1, h2, h3 {
+		line-height: 1em;
+	}
+
+	h1, h2 {
+		font-weight: 400;
+		font-family: $serif;
+		text-transform: uppercase;
+		letter-spacing: 0.25em;
+	}
+
+	h2, h3 {
+		color: $black;
+	}
+
+	h1 {
+		font-size: 2.25em;
+		color: $white;
+		text-align: center;
+		margin: 0;
+		padding: 0.5em 0;
+		background: $blue-dk;
+	}
+
+	h2 {
+		font-size: 1.325em;
+		padding-bottom: 0.375em;
+		border-bottom: 1px solid;
+		display: inline-block;
+		margin: 0.275em 0 1.25em;
+	}
+
+	h3 {
+		font-size: 1em;
+		text-transform: lowercase;
+		font-weight: bold;
+		margin: 0;
+	}
+
+	h3, p {
+		font-family: $sans-serif;
+		font-size: 0.825em;
+	}
+
+	p {
+		text-transform: lowercase;
+	}
+
+	.numerals {
+		font-family: $italic;
+		font-style: italic;
+	}
+
+	/* SITE-SPECIFIC */
+
+	article {
+		margin-top: 3em;
+	}
+
+	section {
+		margin-top: 2em;
+	}
+
+	.photo {
+		width: 100%;
+		height: 200px;
+		background-size: cover;
+	}
+
+	h3 .numerals {	
+		margin-left: 0.75em;
+	}
+
+	.menu-item {
+		p {
+			padding: 0.25em 0 0;
+		}
+		+ .menu-item {
+			margin-top: 1em;
+		}
+	}
+
+} /* end .menu */
+
+.page-template-menus, .single-menus, .post-type-archive-menus {
+	.container-wrap {
+		padding-top: 8px; /* magic number */
+		padding-bottom: 48px;
+	}
+}
+
+

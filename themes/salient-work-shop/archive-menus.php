@@ -26,7 +26,7 @@ endwhile; endif;
 
 <div class="container-wrap <?php echo ($fullscreen_header == true) ? 'fullscreen-blog-header': null; ?> <?php if($blog_type == 'std-blog-fullwidth' || $hide_sidebar == '1') echo 'no-sidebar'; ?>">
 
-	<div class="container main-content">
+	<div class="container main-content menu">
 
 		<?php
 		$args = array( 'post_type' => 'menus', 'orderby' => 'menu_order', 'order'=> 'ASC' );
@@ -38,8 +38,6 @@ endwhile; endif;
 		endforeach; 
 		wp_reset_postdata();
 		?>
-
-		<p><strong>Delivery and pick up is available. Call us: 310-396-8009</strong></p>
 		
 	</div><!--/container-->
 
