@@ -40,6 +40,16 @@ h1, h2, h3, h4, h5, h6, nav a, #footer-outer .widget h4, .text-on-hover-wrap .ca
 #call-to-action span {
   font-family: "Playfair Display"; }
 
+#footer-outer {
+  background-size: 240px 240px;
+  background-repeat: no-repeat;
+  background-position: 50% 140%; }
+  #footer-outer #copyright {
+    background-color: transparent; }
+
+@media only screen and (max-width: 1000px) {
+  #footer-outer {
+    background-position: 50% 105%; } }
 /*******************************
 **** MENU PAGES ****************
 ********************************/

@@ -21,7 +21,7 @@ $cta_btn_color = (!empty($options['cta-btn-color'])) ? $options['cta-btn-color']
 
 <?php } ?>
 
-<div id="footer-outer" data-using-widget-area="<?php echo $using_footer_widget_area; ?>">
+<div id="footer-outer" data-using-widget-area="<?php echo $using_footer_widget_area; ?>" style="background-image: url(<?php echo get_stylesheet_directory_uri() . '/img/footer-stamp.png' ?>)">
 	
 	<?php if( $using_footer_widget_area == 'true') { ?>
 		
