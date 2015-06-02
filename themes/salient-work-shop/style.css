@@ -8,13 +8,43 @@ Template: salient
 Version: 0.0.1
 */
 @import url("../salient/style.css");
+/*******************************
+**** COLOR *********************
+********************************/
+/*******************************
+**** TYPOGRAPHY ****************
+********************************/
+@font-face {
+  font-family: "AvenirLTPro-Oblique";
+  src: url("fonts/avenir/2E51D9_0_0.eot");
+  src: url("fonts/avenir/2E51D9_0_0.eot?#iefix") format("embedded-opentype"), url("fonts/avenir/2E51D9_0_0.woff2") format("woff2"), url("fonts/avenir/2E51D9_0_0.woff") format("woff"), url("fonts/avenir/2E51D9_0_0.ttf") format("truetype"); }
+@font-face {
+  font-family: "AvenirLTPro-Roman";
+  src: url("fonts/avenir/2E51D9_1_0.eot");
+  src: url("fonts/avenir/2E51D9_1_0.eot?#iefix") format("embedded-opentype"), url("fonts/avenir/2E51D9_1_0.woff2") format("woff2"), url("fonts/avenir/2E51D9_1_0.woff") format("woff"), url("fonts/avenir/2E51D9_1_0.ttf") format("truetype"); }
+@font-face {
+  font-family: "AvenirLTPro-Heavy";
+  src: url("fonts/avenir/2E51D9_2_0.eot");
+  src: url("fonts/avenir/2E51D9_2_0.eot?#iefix") format("embedded-opentype"), url("fonts/avenir/2E51D9_2_0.woff2") format("woff2"), url("fonts/avenir/2E51D9_2_0.woff") format("woff"), url("fonts/avenir/2E51D9_2_0.ttf") format("truetype"); }
+@font-face {
+  font-family: "AvenirLTPro-HeavyOblique";
+  src: url("fonts/avenir/2E51D9_3_0.eot");
+  src: url("fonts/avenir/2E51D9_3_0.eot?#iefix") format("embedded-opentype"), url("fonts/avenir/2E51D9_3_0.woff2") format("woff2"), url("fonts/avenir/2E51D9_3_0.woff") format("woff"), url("fonts/avenir/2E51D9_3_0.ttf") format("truetype"); }
 body {
   color: #0b364c; }
+
+h1, h2, h3, h4, h5, h6, nav a, #footer-outer .widget h4, .text-on-hover-wrap .categories a {
+  font-family: "AvenirLTPro-Heavy";
+  letter-spacing: 0.025em; }
+
+#call-to-action span {
+  font-family: "Playfair Display"; }
 
 /*******************************
 **** MENU PAGES ****************
 ********************************/
 .menu {
+  text-align: center;
   /* GENERAL */
   /* SITE-SPECIFIC */ }
   .menu h1, .menu h2, .menu h3 {
@@ -42,13 +72,14 @@ body {
   .menu h3 {
     font-size: 1em;
     text-transform: lowercase;
-    font-weight: bold;
+    font-family: "AvenirLTPro-Heavy";
     margin: 0; }
   .menu h3, .menu p {
-    font-family: "Montserrat";
-    font-size: 0.825em; }
+    font-size: 0.825em;
+    letter-spacing: 0.025em; }
   .menu p {
-    text-transform: lowercase; }
+    text-transform: lowercase;
+    font-family: "AvenirLTPro-Roman"; }
   .menu .numerals {
     font-family: "Georgia Italic";
     font-style: italic; }

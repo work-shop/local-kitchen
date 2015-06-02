@@ -23,7 +23,7 @@
 			$dish_description = $dish['menu_section_dish_description'];
 		?>
 			<div class="menu-item">
-				<h3><?php echo $dish_name; ?> <span class="numerals"><?php if ( $dish_price ) echo $dish_price . '.' ?></span></h3>
+				<h3><?php echo $dish_name; ?><?php if ( $dish_price ) echo ' <span class="numerals">' . $dish_price . '.</span>' ?></h3>
 				<p><?php echo $dish_description; ?></p>
 			</div>
 		<?php } ?>
