@@ -1,6 +1,6 @@
 <?php 
 /**
-* Menu Single
+* Template Name: Menu Page
 */
 
 get_header(); 
@@ -16,6 +16,8 @@ $theme_skin = (!empty($options['theme-skin']) && $options['theme-skin'] == 'asce
 $hide_sidebar = (!empty($options['blog_hide_sidebar'])) ? $options['blog_hide_sidebar'] : '0'; 
 $blog_type = $options['blog_type']; 
 
+$menus = get_field_object('menu_picker');
+
 if(have_posts()) : while(have_posts()) : the_post();
 
 	nectar_page_header($post->ID); 
@@ -28,9 +30,20 @@ endwhile; endif;
 
 	<div class="container main-content">
 			
-		<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-			<?php get_template_part( 'partials/menu' ); ?> 		
-		<?php endwhile; endif; ?>	
+		<?php
+		
+		$args = array( 'post_type' => 'menus', 'orderby' => 'menu_order', 'order'=> 'ASC' );
+		$menuslist = get_posts( $args );
+		foreach ( $menuslist as $post ) :
+		  setup_postdata( $post ); ?> 
+			<?php get_template_part( 'partials/menu' ); ?> 	
+		<?php
+		endforeach; 
+		wp_reset_postdata();
+
+		the_content();
+
+		?>	
 		
 	</div><!--/container-->
 
