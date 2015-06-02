@@ -12,6 +12,19 @@ Version: 0.0.1
 
 
 /*******************************
+**** MIXINS ********************
+********************************/
+
+@mixin transition($property: all,$duration: 0.125s, $easing: linear){
+	transition: $property $duration $easing;
+	-moz-transition: $property $duration $easing; 
+	-webkit-transition: $property $duration $easing; 
+	-o-transition: $property $duration $easing; 	
+	-ms-transition: $property $duration $easing; 		
+}
+
+
+/*******************************
 **** COLOR *********************
 ********************************/
 
@@ -41,6 +54,26 @@ body {
 h1, h2, h3, h4, h5, h6, nav a, #footer-outer .widget h4, .text-on-hover-wrap .categories a {
 	font-family: $bold;
 	letter-spacing: 0.025em;
+}
+
+
+/*******************************
+**** HEADER ********************
+********************************/
+
+header#top nav .sf-menu li {
+	a {
+		border-bottom: 1px solid transparent;
+		padding-bottom: 0.25em !important;
+		padding-left: 0;
+		padding-right: 0;
+		margin: 0 1em 3em;
+		// transition: all 0.1s linear;
+		@include transition(all);
+	}
+	> a:hover, &.current-menu-item > a {
+		border-color: $blue-dk;
+	}
 }
 
 

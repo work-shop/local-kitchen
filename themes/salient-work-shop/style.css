@@ -9,6 +9,9 @@ Version: 0.0.1
 */
 @import url("../salient/style.css");
 /*******************************
+**** MIXINS ********************
+********************************/
+/*******************************
 **** COLOR *********************
 ********************************/
 /*******************************
@@ -36,6 +39,23 @@ body {
 h1, h2, h3, h4, h5, h6, nav a, #footer-outer .widget h4, .text-on-hover-wrap .categories a {
   font-family: "AvenirLTPro-Heavy";
   letter-spacing: 0.025em; }
+
+/*******************************
+**** HEADER ********************
+********************************/
+header#top nav .sf-menu li a {
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.25em !important;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0 1em 3em;
+  transition: all 0.125s linear;
+  -moz-transition: all 0.125s linear;
+  -webkit-transition: all 0.125s linear;
+  -o-transition: all 0.125s linear;
+  -ms-transition: all 0.125s linear; }
+header#top nav .sf-menu li > a:hover, header#top nav .sf-menu li.current-menu-item > a {
+  border-color: #0b364c; }
 
 /*******************************
 **** FOOTER ********************
