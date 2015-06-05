@@ -23,6 +23,19 @@ Version: 0.0.1
 	-ms-transition: $property $duration $easing; 		
 }
 
+@mixin placeholder-text($color1,$color2) {
+	&::-webkit-input-placeholder { color: $color1; @include transition(all); }
+	&:-moz-placeholder { color: $color1; @include transition(all); }
+	&::-moz-placeholder { color: $color1; @include transition(all); }
+	&:-ms-input-placeholder { color: $color1; @include transition(all); }
+	&:focus {
+		&::-webkit-input-placeholder { color: $color2; }
+		&:-moz-placeholder { color: $color2; }
+		&::-moz-placeholder { color: $color2; }
+		&:-ms-input-placeholder { color: $color2; }
+	}
+}
+
 
 /*******************************
 **** COLOR *********************
@@ -30,6 +43,7 @@ Version: 0.0.1
 
 $black: #0b364c;
 $navy: #0b364c;
+$gray: #abb4b9;
 $white: #ffffff;
 
 body {
@@ -96,12 +110,27 @@ header#top nav .sf-menu li {
 	background-size: 240px 240px;
 	background-repeat: no-repeat;
 	background-position: 50% 140%;
+	.widget h4 {
+		letter-spacing: 0.275em;
+	}
 	#copyright {
 		background-color: transparent;
 	}
 }
 @media only screen and (max-width: 1000px) {
 	#footer-outer { background-position: 50% 105%; }
+}
+
+input[type="email"] {
+	padding: 6px !important;
+	max-width: 240px;
+	opacity: 0.6;
+	border-bottom: 0;
+	@include transition(all);
+	@include placeholder-text($navy,$gray);
+	&:focus {
+		opacity: 1.0;
+	}
 }
 
 

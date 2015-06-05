@@ -73,12 +73,63 @@ header#top nav .sf-menu li > a:hover, header#top nav .sf-menu li.current-menu-it
   background-size: 240px 240px;
   background-repeat: no-repeat;
   background-position: 50% 140%; }
+  #footer-outer .widget h4 {
+    letter-spacing: 0.275em; }
   #footer-outer #copyright {
     background-color: transparent; }
 
 @media only screen and (max-width: 1000px) {
   #footer-outer {
     background-position: 50% 105%; } }
+input[type="email"] {
+  padding: 6px !important;
+  max-width: 240px;
+  opacity: 0.6;
+  border-bottom: 0;
+  transition: all 0.125s linear;
+  -moz-transition: all 0.125s linear;
+  -webkit-transition: all 0.125s linear;
+  -o-transition: all 0.125s linear;
+  -ms-transition: all 0.125s linear; }
+  input[type="email"]::-webkit-input-placeholder {
+    color: #0b364c;
+    transition: all 0.125s linear;
+    -moz-transition: all 0.125s linear;
+    -webkit-transition: all 0.125s linear;
+    -o-transition: all 0.125s linear;
+    -ms-transition: all 0.125s linear; }
+  input[type="email"]:-moz-placeholder {
+    color: #0b364c;
+    transition: all 0.125s linear;
+    -moz-transition: all 0.125s linear;
+    -webkit-transition: all 0.125s linear;
+    -o-transition: all 0.125s linear;
+    -ms-transition: all 0.125s linear; }
+  input[type="email"]::-moz-placeholder {
+    color: #0b364c;
+    transition: all 0.125s linear;
+    -moz-transition: all 0.125s linear;
+    -webkit-transition: all 0.125s linear;
+    -o-transition: all 0.125s linear;
+    -ms-transition: all 0.125s linear; }
+  input[type="email"]:-ms-input-placeholder {
+    color: #0b364c;
+    transition: all 0.125s linear;
+    -moz-transition: all 0.125s linear;
+    -webkit-transition: all 0.125s linear;
+    -o-transition: all 0.125s linear;
+    -ms-transition: all 0.125s linear; }
+  input[type="email"]:focus::-webkit-input-placeholder {
+    color: #abb4b9; }
+  input[type="email"]:focus:-moz-placeholder {
+    color: #abb4b9; }
+  input[type="email"]:focus::-moz-placeholder {
+    color: #abb4b9; }
+  input[type="email"]:focus:-ms-input-placeholder {
+    color: #abb4b9; }
+  input[type="email"]:focus {
+    opacity: 1.0; }
+
 /*******************************
 **** MENU PAGES ****************
 ********************************/
