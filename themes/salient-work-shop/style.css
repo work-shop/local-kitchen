@@ -60,6 +60,9 @@ header#top nav .sf-menu li a {
 header#top nav .sf-menu li > a:hover, header#top nav .sf-menu li.current-menu-item > a {
   border-color: #0b364c; }
 
+#page-header-bg {
+  top: 153px !important; }
+
 /*******************************
 **** FOOTER ********************
 ********************************/
