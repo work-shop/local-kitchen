@@ -9,7 +9,7 @@ get_header(); ?>
 	<div class="container main-content">
 		
 		<div class="row">
-			
+
 			<div id="post-area" class="col span_9">
 				<?php 
 				

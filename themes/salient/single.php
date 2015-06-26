@@ -19,7 +19,6 @@ if(have_posts()) : while(have_posts()) : the_post();
 endwhile; endif;
 
 
-
  if($fullscreen_header == true) { 
 
 	if(empty($bg) && empty($bg_color)) { ?>
@@ -28,7 +27,7 @@ endwhile; endif;
 				<div class="row">
 					<div class="col span_6 section-title blog-title">
 						<h1 class="entry-title"><?php the_title(); ?></h1>
-						<div class="author-section">
+						<!-- <div class="author-section">
 						 	<span class="meta-author vcard author">  
 						 		<?php if (function_exists('get_avatar')) { echo get_avatar( get_the_author_meta('email'), 100 ); }?>
 						 	</span> 
@@ -36,7 +35,7 @@ endwhile; endif;
 							 	<span class="fn"><?php the_author_posts_link(); ?></span>
 							 	<span class="meta-date date updated"><i><?php echo get_the_date(); ?></i></span>
 							 </div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
@@ -61,7 +60,6 @@ endwhile; endif;
 
 
 
-
 <div class="container-wrap <?php echo ($fullscreen_header == true) ? 'fullscreen-blog-header': null; ?> <?php if($blog_type == 'std-blog-fullwidth' || $hide_sidebar == '1') echo 'no-sidebar'; ?>">
 
 	<div class="container main-content">
@@ -77,12 +75,12 @@ endwhile; endif;
 							<h1 class="entry-title"><?php the_title(); ?></h1>
 							
 							<div id="single-below-header">
-								<span class="meta-author vcard author"><span class="fn"><?php echo __('By', NECTAR_THEME_NAME); ?> <?php the_author_posts_link(); ?></span></span> 
+								<!-- <span class="meta-author vcard author"><span class="fn"><?php echo __('By', NECTAR_THEME_NAME); ?> <?php the_author_posts_link(); ?></span></span> -->
 								<?php if( !empty($options['blog_social']) && $options['blog_social'] == 1) { ?>
 									<span class="meta-date date updated"><?php echo get_the_date(); ?></span>
 								<?php } ?>
 								<span class="meta-category"><?php the_category(', '); ?></span>
-								<span class="meta-comment-count"><a href="<?php comments_link(); ?>"><?php comments_number( __('No Comments', NECTAR_THEME_NAME), __('One Comment ', NECTAR_THEME_NAME), __('% Comments', NECTAR_THEME_NAME) ); ?></a></span>
+								<!--<span class="meta-comment-count"><a href="<?php comments_link(); ?>"><?php comments_number( __('No Comments', NECTAR_THEME_NAME), __('One Comment ', NECTAR_THEME_NAME), __('% Comments', NECTAR_THEME_NAME) ); ?></a></span>-->
 								
 							</ul><!--project-additional-->
 							</div><!--/single-below-header-->

@@ -3,7 +3,7 @@
 <?php nectar_page_header(get_option('page_for_posts')); ?>
 
 <div class="container-wrap">
-		
+		<!-- Hello! -->
 	<div class="container main-content">
 		
 		<?php if(!is_home()) { ?>
